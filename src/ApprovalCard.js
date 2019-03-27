@@ -1,10 +1,12 @@
 import React from 'react';
 
-const ApprovalCard = () => {
+const ApprovalCard = props => {
+    console.log(props); // CommentDetail component shows under children property
+
     return (
         <div className="ui card">
             <div className="content">
-                Are you sure?
+                {props.children} {/* Display entire CommentDetail component */}
             </div>
             <div className="extra content">
                 <div className="ui two buttons">
